@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.8"
+    "@fontsource/orbitron": "^5.2.6",
+    "@fontsource/roboto": "^5.2.6",
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@tailwindcss/vite": "^4.1.12",
+    "astro": "^5.13.4",
+    "tailwind": "^2.3.1",
+    "tailwindcss": "^4.1.12"
   }
 }

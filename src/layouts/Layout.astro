@@ -1,5 +1,8 @@
+---
+import '../styles/global.css';
+---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -7,16 +10,17 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
+	<body class="relative">
+		<div id="preloader" class="preloader">
+			<div class="preloader-content text-center">
+				<h2 class="text-3xl font-bold mb-2 futuristic-text">
+					<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">CARGANDO</span>
+				</h2>
+				<div class="loading-bar container">
+					<div id="loading-bar" class="loading-bar"></div>
+				</div>
+			</div>
+		</div>
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
