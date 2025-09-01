@@ -8,7 +8,7 @@
     --neon-blue: rgb(0, 242, 255);
     --neon-purple: rgb(153, 0, 255);
     --neon-pink: rgb(255, 0, 204);
-    --neon-cyan: rgba(0,242,255,0.2);
+    --neon-cyan: rgba(0, 242, 255, 0.2);
     --dark-bg: rgb(5, 7, 33);
     --darker-bg: rgb(2, 4, 15);
 }
@@ -91,7 +91,36 @@ h3,
 .neon-button:hover {
     color: #fff;
     background: var(--neon-cyan);
-    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+    ;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-left-color: var(--neon-blue);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.glow {
+    text-shadow: 0 0 5px var(--neon-blue), 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue);
 }
 
 .preloader {
