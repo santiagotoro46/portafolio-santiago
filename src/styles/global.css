@@ -58,6 +58,7 @@ h3,
     display: flex;
     align-items: center;
     padding: 2rem 0;
+    scroll-margin-top:4.375rem;
 }
 
 .hero-particles {
