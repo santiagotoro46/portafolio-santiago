@@ -1,7 +1,10 @@
 ---
 import "../styles/global.css";
-import Icons from '../components/Icons.astro'
+import 'tippy.js/dist/tippy.css';
+import Icons from "../components/Icons.astro";
+import TippyInit from "../components/TippyInit.astro";
 ---
+
 <!doctype html>
 <html lang="es">
   <head>
@@ -26,6 +29,7 @@ import Icons from '../components/Icons.astro'
       </div>
     </div>
     <Icons />
+    <TippyInit />
     <slot />
     <!-- <script is:inline>
       document.addEventListener("DOMContentLoaded", function () {
