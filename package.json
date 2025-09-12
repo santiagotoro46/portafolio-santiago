@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.4",
     "tailwind": "^2.3.1",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "tippy.js": "^6.3.7"
   }
 }
