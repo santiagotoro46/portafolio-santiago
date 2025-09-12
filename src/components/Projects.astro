@@ -1,54 +1,100 @@
-  <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold mb-2 glow">
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">PROYECTOS</span>
-                </h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
-                <p class="mt-4 text-gray-300 max-w-2xl mx-auto">Una colección de mis proyectos con los cuales aprendo cada día más.</p>
+---
+import { Image } from 'astro:assets';
+import ProjectSena from '../assets/images/prueba-tecnica.png';
+---
+
+<div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-2 glow">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">PROYECTOS</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">Una colección de mis proyectos con los cuales aprendo cada día más.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden">
+                <img src="https://imagenes.elpais.com/resizer/v2/LKBJXYFNZFA4ZOPCAUZZBXZMQA.PNG?auth=429b10f40ff0ee1509f1ef07435def58604af49cc225918adec47505bcfac68f&width=1200" alt="Proyecto Rick And Morty" class="w-full h-48 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://imagenes.elpais.com/resizer/v2/LKBJXYFNZFA4ZOPCAUZZBXZMQA.PNG?auth=429b10f40ff0ee1509f1ef07435def58604af49cc225918adec47505bcfac68f&width=1200" alt="Proyecto 1" class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-blue-400">Rick and Morty search</h3>
-                        <p class="text-gray-300 mb-4">Buscador de personajes de la serie animada.</p>
-                        <div class="flex flex-wrap gap-1 mb-5">
-                            <svg class="icon-technology">
-                            <use href="#icon-html5" />
-                            </svg>
-                            <svg class="icon-technology">
-                            <use href="#icon-css" />
-                            </svg>
-                            <svg class="icon-technology">
-                            <use href="#icon-javascript" />
-                            </svg>
-                        </div>
-                        <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-blue-400">Rick and Morty search</h3>
+                <p class="text-gray-300 mb-4">Buscador de personajes de la serie animada.</p>
+                <div class="flex flex-wrap gap-1 mb-5">
+                    <svg class="icon-technology" data-tippy-content="HTML">
+                    <use href="#icon-html5" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="CSS">
+                    <use href="#icon-css" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="JavaScript">
+                    <use href="#icon-javascript" />
+                    </svg>
                 </div>
-
-                <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://imagenes.elpais.com/resizer/v2/LKBJXYFNZFA4ZOPCAUZZBXZMQA.PNG?auth=429b10f40ff0ee1509f1ef07435def58604af49cc225918adec47505bcfac68f&width=1200" alt="Proyecto 1" class="w-full h-48 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 text-blue-400">Prueba tecnica (SENA)</h3>
-                        <p class="text-gray-300 mb-4">Una pagina donde se muestran peliculas y series dependiendo de la busqueda.</p>
-                        <div class="flex flex-wrap gap-1 mb-5">
-                            <svg class="icon-technology">
-                            <use href="#icon-react" />
-                            </svg>
-                            <svg class="icon-technology">
-                                <use href="#icon-tmdb" />
-                            </svg>
-                        </div>
-                        <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
+                <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
             </div>
         </div>
+
+        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden">
+                <Image src={ ProjectSena } alt="Proyecto Sena" class="w-full h-48 object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-blue-400">Prueba tecnica (SENA)</h3>
+                <p class="text-gray-300 mb-4">Una pagina donde se muestran peliculas y series dependiendo de la busqueda.</p>
+                <div class="flex flex-wrap gap-1 mb-5">
+                    <svg class="icon-technology" data-tippy-content="HTML">
+                    <use href="#icon-html5" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="Bootstrap">
+                    <use href="#icon-bootstrap" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="React">
+                    <use href="#icon-react" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="TMDB API">
+                        <use href="#icon-tmdb" />
+                    </svg>
+                </div>
+                <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+
+        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden">
+                <img src="https://imagenes.elpais.com/resizer/v2/LKBJXYFNZFA4ZOPCAUZZBXZMQA.PNG?auth=429b10f40ff0ee1509f1ef07435def58604af49cc225918adec47505bcfac68f&width=1200" alt="Mercado Tech" class="w-full h-48 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 text-blue-400"> Mercado Tech</h3>
+                <p class="text-gray-300 mb-4">Un e-commerce pensado para la venta de productos tecnologicos</p>
+                <div class="flex flex-wrap gap-1 mb-5">
+                    <svg class="icon-technology" data-tippy-content="HTML">
+                    <use href="#icon-html5" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="CSS">
+                    <use href="#icon-css" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="Tailwind">
+                    <use href="#icon-tailwind" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="JavaScript">
+                    <use href="#icon-javascript" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="React">
+                    <use href="#icon-react" />
+                    </svg>
+                    <svg class="icon-technology" data-tippy-content="MongoDB">
+                    <use href="#icon-mongodb" />
+                    </svg>
+                    <svg class="icon-technology"data-tippy-content="Zod">
+                    <use href="#icon-zod" />
+                    </svg>
+                </div>
+                <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
