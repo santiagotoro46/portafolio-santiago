@@ -1,8 +1,6 @@
 ---
 import "../styles/global.css";
-import 'tippy.js/dist/tippy.css';
 import Icons from "../components/Icons.astro";
-import TippyInit from "../components/TippyInit.astro";
 ---
 
 <!doctype html>
@@ -20,26 +18,19 @@ import TippyInit from "../components/TippyInit.astro";
         <h2 class="text-3xl font-bold mb-2 futuristic-text">
           <span
             class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
-            >CARGANDO...</span
+            >CARGANDO</span
           >
         </h2>
-        <div class="loading-bar container">
+        <div class="loading-bar-container">
           <div id="loading-bar" class="loading-bar"></div>
         </div>
       </div>
     </div>
     <Icons />
-    <TippyInit />
     <slot />
-    <!-- <script is:inline>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-          duration: 800,
-          easing: "ease-in-out",
-          once: true,
-          mirror: false,
-        });
-      });
-    </script> -->
+
+    <script>
+      import "@js/Main.js";
+    </script>
   </body>
 </html>
