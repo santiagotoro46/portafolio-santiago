@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import ProjectSena from '../assets/images/prueba-tecnica.png';
+import ProjectEcomerce from '../assets/images/proyecto-e-commerce.png';
 ---
 
 <div class="container mx-auto px-4">
@@ -64,7 +65,7 @@ import ProjectSena from '../assets/images/prueba-tecnica.png';
 
         <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
             <div class="relative overflow-hidden">
-                <img src="https://imagenes.elpais.com/resizer/v2/LKBJXYFNZFA4ZOPCAUZZBXZMQA.PNG?auth=429b10f40ff0ee1509f1ef07435def58604af49cc225918adec47505bcfac68f&width=1200" alt="Mercado Tech" class="w-full h-48 object-cover">
+                <Image src = {ProjectEcomerce} alt="Mercado Tech" class="w-full h-48 object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
             </div>
             <div class="p-6">
@@ -91,6 +92,9 @@ import ProjectSena from '../assets/images/prueba-tecnica.png';
                     </svg>
                     <svg class="icon-technology"data-tippy-content="Zod">
                     <use href="#icon-zod" />
+                    </svg>
+                    <svg class="icon-technology"data-tippy-content="Node">
+                    <use href="#icon-node" />
                     </svg>
                 </div>
                 <a href="" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
