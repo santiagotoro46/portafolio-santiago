@@ -1,0 +1,50 @@
+<div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-2 glow">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">CONTACTO</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="mt-4 text-gray-300 max-w-2xl mx-auto">¿Tienes un proyecto en mente? Envíame un mensaje y trabajemos juntos para hacerlo realidad.</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="neon-border rounded-lg p-8 backdrop-blur-sm bg-opacity-30 bg-black" data-aos="fade-up">
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="nombre" class="block text-gray-300 mb-2">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="descripcion" class="block text-gray-300 mb-2">Descripción</label>
+                            <textarea id="descripcion" name="descripcion" rows="5" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none resize-none" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="neon-button w-full flex justify-center items-center button-send">
+                                <span>Enviar Mensaje</span>
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Form Success Message (Hidden by default) -->
+                    <div id="form-success" class="text-center py-10 hidden">
+                        <div class="success-checkmark mb-6">
+                            <div class="check-icon"></div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 text-blue-400">¡Mensaje Enviado!</h3>
+                        <p class="text-gray-300 mb-6">Gracias por contactarme. Me pondré en contacto contigo pronto.</p>
+                        <button id="send-another" class="neon-button">
+                            <span>Enviar otro mensaje</span>
+                        </button>
+                    </div>
+
+                    <!-- Form Loading State (Hidden by default) -->
+                    <div id="form-loading" class="text-center py-16 hidden">
+                        <div class="inline-block">
+                            <div class="w-12 h-12 rounded-full border-t-2 border-b-2 border-blue-400 animate-spin"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
