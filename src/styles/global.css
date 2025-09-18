@@ -271,6 +271,7 @@ h1,h2,h3, .futuristic-text {
     display: inline-block;
     flex-shrink: 0;
 }
+
 /*Rotación 360*/
 .tippy-box[data-animation="rotate"][data-state="hidden"] {
     transform: rotate(0deg) scale(0.8);
