@@ -265,6 +265,10 @@ h1,h2,h3, .futuristic-text {
     cursor: pointer;
 }
 
+.button-send-another {
+    cursor: pointer;
+}
+
 .icon-technology {
     width: 25px;
     height: 25px;
@@ -307,3 +311,10 @@ h1,h2,h3, .futuristic-text {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--neon-blue);
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
