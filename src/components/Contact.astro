@@ -12,15 +12,19 @@
                     <!-- Contact Form -->
                     <form id="contact-form" class="space-y-6">
                         <div>
-                            <label for="nombre" class="block text-gray-300 mb-2">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Tu nombre" required>
+                            <label for="name" class="block text-gray-300 mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="email_id" class="block text-gray-300 mb-2">Correo electrónico</label>
+                            <input type="text" id="email_id" name="email_id" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Tu correo" required>
                         </div>
                         <div>
                             <label for="descripcion" class="block text-gray-300 mb-2">Descripción</label>
                             <textarea id="descripcion" name="descripcion" rows="5" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none resize-none" placeholder="Cuéntame sobre tu proyecto" required></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="neon-button w-full flex justify-center items-center button-send">
+                            <button type="button" id="send-button" class="neon-button w-full flex justify-center items-center button-send">
                                 <span>Enviar Mensaje</span>
                                 <i class="fas fa-paper-plane ml-2"></i>
                             </button>
