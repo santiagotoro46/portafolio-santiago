@@ -10,18 +10,23 @@
             <div class="max-w-2xl mx-auto">
                 <div class="neon-border rounded-lg p-8 backdrop-blur-sm bg-opacity-30 bg-black" data-aos="fade-up">
                     <!-- Contact Form -->
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-gray-300 mb-2">Nombre</label>
                             <input type="text" id="name" name="name" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="¿Como te llamas?" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Celular</label>
+                            <input type="number" id="phone" name="phone" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Déjame tu contacto" required>
                         </div>
                         <div>
                             <label for="email_id" class="block text-gray-300 mb-2">Correo electrónico</label>
                             <input type="text" id="email_id" name="email_id" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none" placeholder="Coloca tu correo" required>
                         </div>
                         <div>
-                            <label for="descripcion" class="block text-gray-300 mb-2">Descripción</label>
-                            <textarea id="descripcion" name="descripcion" rows="5" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none resize-none" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+                            <label for="description" class="block text-gray-300 mb-2">Descripción</label>
+                            <textarea id="description" name="description" rows="5" class="neon-input w-full px-4 py-3 rounded-lg focus:outline-none resize-none" placeholder="Cuéntame sobre tu proyecto" maxlength="500" required></textarea>
+                            <p class="text-xs mb-2 text-right" id="char-counter">0/500</p>
                         </div>
                         <div>
                             <button type="button" id="send-button" class="neon-button w-full flex justify-center items-center button-send">
@@ -30,18 +35,6 @@
                             </button>
                         </div>
                     </form>
-
-                    <!-- Form Success Message (Hidden by default) -->
-                    <div id="form-success" class="text-center py-10 hidden">
-                        <div class="success-checkmark mb-6">
-                            <div class="check-icon"></div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2 text-blue-400">¡Mensaje Enviado!</h3>
-                        <p class="text-gray-300 mb-6">Gracias por contactarme. Me pondré en contacto contigo pronto.</p>
-                        <button id="send-another" class="neon-button">
-                            <span>Enviar otro mensaje</span>
-                        </button>
-                    </div>
 
                     <!-- Form Loading State (Hidden by default) -->
                     <div id="form-loading" class="text-center py-16 hidden">

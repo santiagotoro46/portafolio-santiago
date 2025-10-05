@@ -4,6 +4,7 @@ import tippy from 'tippy.js';
 import 'tippy.js/animations/shift-away.css';
 import "tippy.js/dist/backdrop.css";
 import 'tippy.js/dist/tippy.css';
+import { initSendEmail } from './SendEmail.js';
 
 const initAOS = () => {
     AOS.init({
@@ -111,6 +112,12 @@ const initScrollSpy = () => {
     window.addEventListener("scroll", onScroll);
 };
 
+window.addEventListener("load", () => {
+    if (window.location.hash) {
+        window.location.href = window.location.origin + window.location.pathname;
+    }
+});
+
 
 
 const main = () => {
@@ -120,6 +127,7 @@ const main = () => {
     initMobileMenuToggle();
     initMobileNavLinks();
     initScrollSpy();
+    initSendEmail();
 }
 
 document.addEventListener('DOMContentLoaded', main);
