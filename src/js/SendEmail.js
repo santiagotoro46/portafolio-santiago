@@ -25,7 +25,7 @@ export const initSendEmail = () => {
             borderRadius: "5px",
             fontFamily: "Orbitron, sans-serif",
             boxShadow: "0 0 15px rgba(0, 242, 255, 0.6)",
-            color: "#fff",
+            color: "#F2EDED",
         },
     }).showToast();
 }
