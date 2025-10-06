@@ -56,7 +56,7 @@ export const POST: APIRoute = async ({ request }) => {
 
         <div style="text-align:center; font-size:13px; color:#a1a1aa; margin-top:25px; border-top:1px solid #1e1e1e; padding-top:15px;">
             ✉️ Este correo fue generado a través de tu portafolio.<br /><br />
-            <a href="https://portafolio-santiago-sigma.vercel.app" style="color:#2563eb; text-decoration:none;">Visitar portafolio</a><br />
+            <a href="https://portafolio-santiago-sigma.vercel.app/" style="color:#2563eb; text-decoration:none;">Visitar portafolio</a><br />
             © 2025 Portafolio Santiago Toro
         </div>
     </div>
