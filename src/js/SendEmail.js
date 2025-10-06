@@ -153,6 +153,8 @@ export const initSendEmail = () => {
 
             showToast("Mensaje enviado con éxito.", "success");
             form.reset();
+            const counter = document.getElementById("char-counter");
+            if (counter) counter.textContent = "0/500";
         } catch (error) {
             showToast("Ocurrio un error inesperado. Inténtalo de nuevo.", "error");
             console.error(error);
