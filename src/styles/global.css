@@ -27,6 +27,19 @@ body {
     /* background-size: 40px, 40px, 100%, 100%; Se comenta por ahora ya que rompe el estilo */
 }
 
+@media (width:360px){
+    h1 {
+        margin-top:2.5rem;
+    }
+}
+
+@media (width:375px){
+    h1 {
+        margin-top:2.5rem;
+    }
+}
+
+
 .preloader {
     position: fixed;
     top: 0;
