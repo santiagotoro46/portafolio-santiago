@@ -1,3 +1,8 @@
+---
+const phoneNumber = "573183898930";
+const msg = "!Hola! Quiero ponerme en contacto con tigo.";
+const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${msg}`;
+---
 <footer class="bg-black opacity-60 py-8">
     <div class="container mx-auto px-4 text-center">
     <div class="mb-6">
@@ -14,9 +19,12 @@
         <a href="https://github.com/santiagotoro46" class="text-gray-400 hover:text-purple-400 transition-colors" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github text-xl"></i>
         </a>
+        <a href={url} class="text-gray-400 hover:text-green-500 transition-colors" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
     </div>
     <div class="mt-8 text-gray-500 text-sm">
-       <p>&copy; 2025 Portafolio Santiago Orrego Toro. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Portafolio Santiago Orrego Toro. Todos los derechos reservados.</p>
     </div>
 </div>
 </footer>
