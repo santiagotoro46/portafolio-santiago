@@ -1,0 +1,185 @@
+---
+// Componente de sección "En Construcción"
+---
+
+<div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-2 glow">
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+                >EN CONSTRUCCIÓN</span
+            >
+        </h2>
+        <div
+            class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"
+        >
+        </div>
+        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+            Proyectos e iniciativas en las que estoy trabajando actualmente para
+            seguir ampliando mis horizontes técnicos.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Columna Izquierda: Tarjeta descriptiva del proyecto -->
+        <div
+            class="lg:col-span-7 project-card neon-border rounded-lg p-8 order-2 lg:order-1"
+            data-aos="fade-right"
+        >
+            <div class="flex items-center mb-4 gap-3">
+                <span
+                    class="px-3 py-1 text-xs font-semibold text-blue-400 bg-blue-900 bg-opacity-35 rounded-full border border-blue-500 border-opacity-30 tracking-wider"
+                >
+                    FULL STACK
+                </span>
+                <span
+                    class="px-3 py-1 text-xs font-semibold text-purple-400 bg-purple-900 bg-opacity-35 rounded-full border border-purple-500 border-opacity-30 tracking-wider animate-pulse"
+                >
+                    EN DESARROLLO
+                </span>
+            </div>
+
+            <h3
+                class="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400 font-orbitron"
+            >
+                Plataforma Web E-commerce
+            </h3>
+
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Actualmente desarrollo una plataforma de e-commerce
+                multicategoría (hogar, tecnología, misceláneos, entre otros),
+                diseñada bajo un enfoque de alta escalabilidad, rendimiento
+                óptimo y rigurosos estándares de seguridad para garantizar
+                transacciones de compra confiables.
+            </p>
+
+            <ul class="text-gray-300 space-y-4 mb-8">
+                <li class="flex items-start">
+                    <span class="text-blue-400 mr-3 font-bold">&gt;</span>
+                    <span
+                        ><strong>Backend:</strong> Arquitectura API RESTful robusta
+                        construida con <strong>Laravel</strong>, implementando
+                        autenticación segura, validación estricta y
+                        controladores optimizados.</span
+                    >
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-400 mr-3 font-bold">&gt;</span>
+                    <span
+                        ><strong>Frontend:</strong> Interfaz de usuario Single Page
+                        Application (SPA) dinámica e interactiva desarrollada en <strong
+                            >Angular</strong
+                        >, estructurada en componentes modulares y tipado fuerte
+                        con TypeScript.</span
+                    >
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-400 mr-3 font-bold">&gt;</span>
+                    <span
+                        ><strong>Base de Datos:</strong> Motor relacional <strong
+                            >MariaDB</strong
+                        >, diseñado para garantizar transacciones rápidas,
+                        integridad referencial y alta disponibilidad de la
+                        información.</span
+                    >
+                </li>
+            </ul>
+
+            <div class="border-t border-gray-800 pt-6">
+                <h4
+                    class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4"
+                >
+                    Tecnologías Utilizadas
+                </h4>
+                <div class="flex flex-wrap gap-4">
+                    <div
+                        class="flex items-center space-x-2 bg-gray-900 bg-opacity-50 px-4 py-2 rounded-lg border border-gray-800 hover:border-blue-500 transition-colors"
+                    >
+                        <svg
+                            class="icon-technology w-6 h-6"
+                            data-tippy-content="Laravel"
+                        >
+                            <use href="#icon-laravel"></use>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-300"
+                            >Laravel</span
+                        >
+                    </div>
+                    <div
+                        class="flex items-center space-x-2 bg-gray-900 bg-opacity-50 px-4 py-2 rounded-lg border border-gray-800 hover:border-red-500 transition-colors"
+                    >
+                        <svg
+                            class="icon-technology w-6 h-6"
+                            data-tippy-content="Angular"
+                        >
+                            <use href="#icon-angular"></use>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-300"
+                            >Angular</span
+                        >
+                    </div>
+                    <div
+                        class="flex items-center space-x-2 bg-gray-900 bg-opacity-50 px-4 py-2 rounded-lg border border-gray-800 hover:border-teal-500 transition-colors"
+                    >
+                        <svg
+                            class="icon-technology w-6 h-6"
+                            data-tippy-content="MariaDB"
+                        >
+                            <use href="#icon-mariadb"></use>
+                        </svg>
+                        <span class="text-sm font-medium text-gray-300"
+                            >MariaDB</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Animación mecánica de engranajes interconectados -->
+        <div
+            class="lg:col-span-5 flex justify-center items-center py-8 lg:py-0 order-1 lg:order-2"
+            data-aos="fade-left"
+        >
+            <div class="relative w-80 h-80 flex items-center justify-center">
+                <!-- Resplandor neón de fondo -->
+                <div
+                    class="absolute w-60 h-60 rounded-full bg-blue-500 bg-opacity-5 blur-3xl"
+                >
+                </div>
+                <div
+                    class="absolute w-44 h-44 rounded-full bg-purple-500 bg-opacity-5 blur-3xl"
+                >
+                </div>
+
+                <!-- Engranaje Grande (Gira en sentido horario) -->
+                <div
+                    class="absolute w-48 h-48 animate-spin-clockwise gear-glow-blue text-sky-400"
+                    style="top: 10%; left: 10%;"
+                >
+                    <svg viewBox="0 0 16 16" class="w-full h-full">
+                        <use href="#icon-gear"></use>
+                    </svg>
+                </div>
+
+                <!-- Engranaje Pequeño (Gira en sentido antihorario, interconectado) -->
+                <div
+                    class="absolute w-32 h-32 animate-spin-counterclockwise gear-glow-purple text-purple-500"
+                    style="top: 42%; left: 50%;"
+                >
+                    <svg viewBox="0 0 16 16" class="w-full h-full">
+                        <use href="#icon-gear"></use>
+                    </svg>
+                </div>
+
+                <!-- Icono Central flotante de herramientas -->
+                <div
+                    class="absolute flex items-center justify-center w-14 h-14 rounded-full bg-slate-950 border border-slate-800 shadow-[0_0_20px_rgba(0,242,255,0.2)]"
+                    style="top: 38%; left: 38%; z-index: 10;"
+                >
+                    <i class="fas fa-tools text-sky-400 animate-pulse text-xl"
+                    ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
