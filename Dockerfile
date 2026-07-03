@@ -1,29 +1,38 @@
-# Etapa 1: Build de Astro
-FROM node:20-alpine AS build
+# syntax=docker/dockerfile:1
 
+FROM node:20-alpine AS base
 WORKDIR /app
 
-# Copiamos dependencias primero
-COPY package*.json ./
-RUN npm install
+# Instala dependencias de producción
+FROM base AS prod-deps
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev && npm cache clean --force
 
-# Copiamos el resto del proyecto
+# Instala dependencias completas para compilar Astro
+FROM base AS build-deps
+COPY package.json package-lock.json ./
+RUN npm ci
+
+# Construye el proyecto Astro SSR
+FROM build-deps AS build
 COPY . .
-
-# Generamos la build estática
 RUN npm run build
 
-# Etapa 2: Producción con Nginx
-FROM nginx:alpine
+# Imagen final para ejecutar Astro como servidor Node
+FROM base AS runtime
 
-# Borramos archivos default de Nginx
-RUN rm -rf /usr/share/nginx/html/*
+ENV NODE_ENV=production
+ENV HOST=0.0.0.0
+ENV PORT=4321
 
-# Copiamos SOLO la carpeta dist generada por Astro
-COPY --from=build /app/dist /usr/share/nginx/html
+RUN addgroup -S astro && adduser -S astro -G astro
 
-# Exponemos el puerto
-EXPOSE 80
+COPY --from=prod-deps /app/node_modules ./node_modules
+COPY --from=build /app/dist ./dist
+COPY package.json ./
 
-# Iniciamos Nginx
-CMD ["nginx", "-g", "daemon off;"]
+USER astro
+
+EXPOSE 4321
+
+CMD ["node", "./dist/server/entry.mjs"]
