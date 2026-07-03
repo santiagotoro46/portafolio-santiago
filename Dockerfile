@@ -1,22 +1,29 @@
-# --- Etapa 1: Compilación ---
+# Etapa 1: Build de Astro
 FROM node:20-alpine AS build
+
 WORKDIR /app
 
-# Copiar archivos de dependencias e instalarlas
+# Copiamos dependencias primero
 COPY package*.json ./
 RUN npm install
 
-# Copiar el resto del código y compilar el proyecto
+# Copiamos el resto del proyecto
 COPY . .
+
+# Generamos la build estática
 RUN npm run build
 
-# --- Etapa 2: Servidor de Producción ---
+# Etapa 2: Producción con Nginx
 FROM nginx:alpine
 
-# Modificado para Astro: Copia el contenido de /app/dist directamente a Nginx
+# Borramos archivos default de Nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copiamos SOLO la carpeta dist generada por Astro
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Exponer el puerto 80 para tráfico web
+# Exponemos el puerto
 EXPOSE 80
 
+# Iniciamos Nginx
 CMD ["nginx", "-g", "daemon off;"]
