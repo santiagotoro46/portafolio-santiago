@@ -9,8 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^11.0.2",
-    "@astrojs/vercel": "^8.2.8",
+    "@astrojs/node": "^9.4.6",
     "@fontsource/orbitron": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
     "@fortawesome/fontawesome-free": "^7.0.0",
