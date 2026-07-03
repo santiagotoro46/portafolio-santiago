@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +11,6 @@ export default defineConfig({
         "@js": "/src/js"
       }
     }
-  },
-  output: 'server',
-  adapter: vercel()
+  }
+  // Eliminamos output y adapter para que sea estático por defecto
 });
