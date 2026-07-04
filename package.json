@@ -22,5 +22,8 @@
     "tailwindcss": "^4.1.12",
     "tippy.js": "^6.3.7",
     "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0"
   }
 }
