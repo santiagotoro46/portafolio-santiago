@@ -8,27 +8,27 @@ export const initSendEmail = () => {
 
     if (!form || !button) return;
 
-    const showToast = (message,type = "info") => {
-    const colors = {
-    success: "linear-gradient(90deg, #00f2ff, #6b00ff)",
-    error: "linear-gradient(90deg, #ff3b3b, #ff0066)",
-    info: "linear-gradient(90deg, #0055ff, #00ccff)",
-    }
+    const showToast = (message, type = "info") => {
+        const colors = {
+            success: "linear-gradient(90deg, #00f2ff, #6b00ff)",
+            error: "linear-gradient(90deg, #ff3b3b, #ff0066)",
+            info: "linear-gradient(90deg, #0055ff, #00ccff)",
+        }
 
-    Toastify({
-        text: message,
-        duration: 5500,
-        gravity: "top",
-        position: "right",
-        style: {
-            background: colors[type],
-            borderRadius: "5px",
-            fontFamily: "Orbitron, sans-serif",
-            boxShadow: "0 0 15px rgba(0, 242, 255, 0.6)",
-            color: "#F2EDED",
-        },
-    }).showToast();
-}
+        Toastify({
+            text: message,
+            duration: 5500,
+            gravity: "top",
+            position: "right",
+            style: {
+                background: colors[type],
+                borderRadius: "5px",
+                fontFamily: "Orbitron, sans-serif",
+                boxShadow: "0 0 15px rgba(0, 242, 255, 0.6)",
+                color: "#F2EDED",
+            },
+        }).showToast();
+    }
 
     // VALIDACIONES
 
@@ -63,9 +63,9 @@ export const initSendEmail = () => {
                 return showError(input, "El nombre debe tener al menos 3 caracteres.");
         }
 
-        if(id === "phone"){
-            if(!value) return showError(input, "El número de celular es obligatorio.");
-            if(!phoneRegex.test(value)) return showError(input, "Por favor ingresa un número de celular válido.");
+        if (id === "phone") {
+            if (!value) return showError(input, "El número de celular es obligatorio.");
+            if (!phoneRegex.test(value)) return showError(input, "Por favor ingresa un número de celular válido.");
         }
 
         if (id === "email_id") {
@@ -145,22 +145,35 @@ export const initSendEmail = () => {
                 body: formData,
             });
 
-            const result = await response.json();
+            const contentType = response.headers.get("content-type");
+
+            const result = contentType && contentType.includes("application/json")
+                ? await response.json()
+                : {
+                    success: false,
+                    error: await response.text(),
+                };
+
+            console.log("STATUS:", response.status);
+            console.log("RESPONSE:", result);
+
             if (!response.ok || !result.success) {
                 showToast("Error al enviar el mensaje. Inténtalo de nuevo.", "error");
                 throw new Error(result.error || "Error en el servidor");
-            }             
+            }
 
             showToast("Mensaje enviado con éxito.", "success");
             form.reset();
+
             const counter = document.getElementById("char-counter");
             if (counter) counter.textContent = "0/500";
         } catch (error) {
-            showToast("Ocurrio un error inesperado. Inténtalo de nuevo.", "error");
+            showToast("Ocurrió un error inesperado. Inténtalo de nuevo.", "error");
             console.error(error);
         } finally {
             loading.classList.add("hidden");
             button.classList.remove("opacity-0", "pointer-events-none");
+            button.disabled = false;
         }
     });
 };
