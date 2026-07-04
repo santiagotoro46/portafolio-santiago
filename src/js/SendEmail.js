@@ -145,18 +145,7 @@ export const initSendEmail = () => {
                 body: formData,
             });
 
-            const contentType = response.headers.get("content-type");
-
-            const result = contentType && contentType.includes("application/json")
-                ? await response.json()
-                : {
-                    success: false,
-                    error: await response.text(),
-                };
-
-            console.log("STATUS:", response.status);
-            console.log("RESPONSE:", result);
-
+            const result = await response.json();
             if (!response.ok || !result.success) {
                 showToast("Error al enviar el mensaje. Inténtalo de nuevo.", "error");
                 throw new Error(result.error || "Error en el servidor");
@@ -164,16 +153,14 @@ export const initSendEmail = () => {
 
             showToast("Mensaje enviado con éxito.", "success");
             form.reset();
-
             const counter = document.getElementById("char-counter");
             if (counter) counter.textContent = "0/500";
         } catch (error) {
-            showToast("Ocurrió un error inesperado. Inténtalo de nuevo.", "error");
+            showToast("Ocurrio un error inesperado. Inténtalo de nuevo.", "error");
             console.error(error);
         } finally {
             loading.classList.add("hidden");
             button.classList.remove("opacity-0", "pointer-events-none");
-            button.disabled = false;
         }
     });
 };
