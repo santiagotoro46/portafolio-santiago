@@ -7,7 +7,7 @@ export const POST: APIRoute = async ({ request }) => {
     try {
         //  Metemos la inicialización aquí adentro
         const apiKey = process.env.RESEND_API_KEY;
-        console.log("llega la apikey?", apiKey)
+        console.log("llega la apikey?", process.env.RESEND_API_KEY)
 
         if (!apiKey) {
             return new Response(
