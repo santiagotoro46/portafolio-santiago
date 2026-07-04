@@ -7,7 +7,6 @@ export const POST: APIRoute = async ({ request }) => {
     try {
         //  Metemos la inicialización aquí adentro
         const apiKey = process.env.RESEND_API_KEY;
-        console.log("llega la apikey?", process.env.RESEND_API_KEY)
 
         if (!apiKey) {
             return new Response(
@@ -15,7 +14,8 @@ export const POST: APIRoute = async ({ request }) => {
                 { status: 500, headers: { 'content-type': 'application/json' } }
             );
         }
-
+        console.log("RESEND_API_KEY existe:", !!process.env.RESEND_API_KEY);
+        console.log("Primeros caracteres:", process.env.RESEND_API_KEY?.substring(0, 5));
         const resend = new Resend(apiKey);
 
         const form = await request.formData();
