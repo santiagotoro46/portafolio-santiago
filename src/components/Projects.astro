@@ -1,104 +1,182 @@
 ---
-import { Image } from 'astro:assets';
-import ProjectSena from '../assets/images/prueba-tecnica.png';
-import ProjectEcomerce from '../assets/images/proyecto-e-commerce.png';
-import ProjectRickAndMorty from '../assets/images/rick-and-morty.avif';
+import { Image } from "astro:assets";
+import ProjectSena from "../assets/images/prueba-tecnica.png";
+import ProjectEcomerce from "../assets/images/proyecto-e-commerce.png";
+import ProjectRickAndMorty from "../assets/images/rick-and-morty.avif";
 ---
 
 <div class="container mx-auto px-4">
     <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold mb-2 glow">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">PROYECTOS</span>
+            <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500"
+                >PROYECTOS</span
+            >
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
-        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">Una colección de mis proyectos con los cuales aprendo cada día más.</p>
+        <div
+            class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"
+        >
+        </div>
+        <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+            Una colección de mis proyectos con los cuales aprendo cada día más.
+        </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div
+            class="project-card neon-border rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
             <div class="relative overflow-hidden">
-                <Image src= { ProjectRickAndMorty } alt="Proyecto Rick And Morty" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <Image
+                    src={ProjectRickAndMorty}
+                    alt="Proyecto Rick And Morty"
+                    class="w-full h-48 object-cover"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
+                >
+                </div>
             </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Rick and Morty search</h3>
-                <p class="text-gray-300 mb-4">Buscador de personajes de la serie animada.</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">
+                    Rick and Morty search
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Buscador de personajes de la serie animada.
+                </p>
                 <div class="flex flex-wrap gap-1 mb-5">
                     <svg class="icon-technology" data-tippy-content="HTML">
-                    <use href="#icon-html5" />
+                        <use href="#icon-html5"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="CSS">
-                    <use href="#icon-css" />
+                        <use href="#icon-css"></use>
                     </svg>
-                    <svg class="icon-technology" data-tippy-content="JavaScript">
-                    <use href="#icon-javascript" />
+                    <svg
+                        class="icon-technology"
+                        data-tippy-content="JavaScript"
+                    >
+                        <use href="#icon-javascript"></use>
                     </svg>
                 </div>
-                <a href="https://github.com/santiagotoro46/Api-Rick-And-Morty-JS" target="_blank" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
+                <a
+                    href="https://rick-and-morty.santiagotoro.online/"
+                    target="_blank"
+                    class="inline-block text-blue-400 hover:text-blue-300 transition-colors"
+                    >Ir al sitio web <i class="fas fa-arrow-right ml-1"></i></a
+                >
             </div>
         </div>
 
-        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div
+            class="project-card neon-border rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
             <div class="relative overflow-hidden">
-                <Image src={ ProjectSena } alt="Proyecto Sena" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <Image
+                    src={ProjectSena}
+                    alt="Proyecto Sena"
+                    class="w-full h-48 object-cover"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
+                >
+                </div>
             </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Prueba tecnica (SENA)</h3>
-                <p class="text-gray-300 mb-4">Una pagina donde se muestran peliculas y series dependiendo de la busqueda.</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">
+                    Prueba tecnica (SENA)
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Una pagina donde se muestran peliculas y series dependiendo
+                    de la busqueda.
+                </p>
                 <div class="flex flex-wrap gap-1 mb-5">
                     <svg class="icon-technology" data-tippy-content="HTML">
-                    <use href="#icon-html5" />
+                        <use href="#icon-html5"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="Bootstrap">
-                    <use href="#icon-bootstrap" />
+                        <use href="#icon-bootstrap"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="React">
-                    <use href="#icon-react" />
+                        <use href="#icon-react"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="TMDB API">
-                        <use href="#icon-tmdb" />
+                        <use href="#icon-tmdb"></use>
                     </svg>
                 </div>
-                <a href="https://github.com/santiagotoro46/Prueba-Tecnica-SENA" target="_blank" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
+                <a
+                    href="https://github.com/santiagotoro46/Prueba-Tecnica-SENA"
+                    target="_blank"
+                    class="inline-block text-blue-400 hover:text-blue-300 transition-colors"
+                    >Ir al repositorio <i class="fas fa-arrow-right ml-1"
+                    ></i></a
+                >
             </div>
         </div>
 
-        <div class="project-card neon-border rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+        <div
+            class="project-card neon-border rounded-lg overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="300"
+        >
             <div class="relative overflow-hidden">
-                <Image src = {ProjectEcomerce} alt="Mercado Tech" class="w-full h-48 object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                <Image
+                    src={ProjectEcomerce}
+                    alt="Mercado Tech"
+                    class="w-full h-48 object-cover"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black to-transparent"
+                >
+                </div>
             </div>
             <div class="p-6">
-                <h3 class="text-xl font-bold mb-2 text-blue-400"> Mercado Tech</h3>
-                <p class="text-gray-300 mb-4">Un e-commerce pensado para la venta de productos tecnologicos</p>
+                <h3 class="text-xl font-bold mb-2 text-blue-400">
+                    Mercado Tech
+                </h3>
+                <p class="text-gray-300 mb-4">
+                    Un e-commerce pensado para la venta de productos
+                    tecnologicos
+                </p>
                 <div class="flex flex-wrap gap-1 mb-5">
                     <svg class="icon-technology" data-tippy-content="HTML">
-                    <use href="#icon-html5" />
+                        <use href="#icon-html5"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="CSS">
-                    <use href="#icon-css" />
+                        <use href="#icon-css"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="Tailwind">
-                    <use href="#icon-tailwind" />
+                        <use href="#icon-tailwind"></use>
                     </svg>
-                    <svg class="icon-technology" data-tippy-content="JavaScript">
-                    <use href="#icon-javascript" />
+                    <svg
+                        class="icon-technology"
+                        data-tippy-content="JavaScript"
+                    >
+                        <use href="#icon-javascript"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="React">
-                    <use href="#icon-react" />
+                        <use href="#icon-react"></use>
                     </svg>
                     <svg class="icon-technology" data-tippy-content="MongoDB">
-                    <use href="#icon-mongodb" />
+                        <use href="#icon-mongodb"></use>
                     </svg>
-                    <svg class="icon-technology"data-tippy-content="Zod">
-                    <use href="#icon-zod" />
+                    <svg class="icon-technology" data-tippy-content="Zod">
+                        <use href="#icon-zod"></use>
                     </svg>
-                    <svg class="icon-technology"data-tippy-content="Node">
-                    <use href="#icon-node" />
+                    <svg class="icon-technology" data-tippy-content="Node">
+                        <use href="#icon-node"></use>
                     </svg>
                 </div>
-                <a href="" target="_blank" class="inline-block text-blue-400 hover:text-blue-300 transition-colors">Ir al repositorio <i class="fas fa-arrow-right ml-1"></i></a>
+                <a
+                    href=""
+                    target="_blank"
+                    class="inline-block text-blue-400 hover:text-blue-300 transition-colors"
+                    >Ir al repositorio <i class="fas fa-arrow-right ml-1"
+                    ></i></a
+                >
             </div>
         </div>
     </div>
